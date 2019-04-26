@@ -1,6 +1,6 @@
-
 .moi_txt {
     text-align: center;
+    margin: 0 auto;
 }
 
 .moi_txt h6 {
@@ -35,20 +35,20 @@ img {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .moimenu a {
     display: inline-block;
-    width: 100px;
+    width: 190px;
     height: auto;
-    text-align: center;
     transition-duration: 0.2s;
     /* border-radius: 20px; */
 }
 
-.moimenu a:hover {
-   /* text-shadow: 0 0 8px black; */
-   background-color: #3B75B8;
+.moimenu .c:hover {
+    /* text-shadow: 0 0 8px black; */
+    background-color: #3B75B8;
 }
 
 .cara {
@@ -71,7 +71,7 @@ img {
 
 .abcom {
     width: 300px;
-    height: 60px;
+    height: 53px;
     margin: 0 auto;
     color: white;
     background-color: #1F1E1B;
@@ -92,4 +92,86 @@ img {
 .colvo {
     font-size: 88px;
     color: #3B75B8;
+    letter-spacing: -5px;
+}
+
+.undcolvo {
+    color: rgba(0, 0, 0, 0.459);
+}
+
+.abcom_production {
+    width: 340px;
+    height: 53px;
+    margin: 0 auto;
+    color: white;
+    background-color: #1F1E1B;
+    box-shadow: 0 0 10px black;
+}
+
+.abcom_abokna {
+    margin: 0 auto;
+    width: 490px;
+    height: 53px;
+    color: white;
+    background-color: #1F1E1B;
+    box-shadow: 0 0 10px black;
+}
+
+.forform {
+    width: 100%;
+    height: 210px;
+    background-color: #4990E3;
+}
+
+.upform {
+    height: 50px;
+    width: 250px;
+    color: white;
+}
+
+.toup {
+    width: 100px;
+    border: 2px solid #00A900;
+    background: #00A900;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    color: white;
+    font-family: verdana;
+    font-size: 12px;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+    z-index: 2;
+    float: right;
+    text-decoration: none;
+}
+
+.toup:hover {
+    box-shadow: 0px 0px 8px black;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 990px) {
+    .moimenu {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: left;
+    }
+}
+
+@media (max-width: 1020px) {
+    .carousel-inner img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 734px) {
+    .carousel-item img {
+        height: 250px;
+    }
 }
