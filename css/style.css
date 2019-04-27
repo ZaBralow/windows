@@ -181,7 +181,7 @@ img {
     .abcom_production {
         width: 240px;
         font-size: 25px;
-        height: 35px;
+        height: 33px;
         margin: 0 auto;
         color: white;
         background-color: #1F1E1B;
@@ -191,14 +191,14 @@ img {
         margin: 0 auto;
         font-size: 23px;
         width: 300px;
-        height: 35px;
+        height: 32px;
         color: white;
         background-color: #1F1E1B;
         box-shadow: 0 0 10px black;
     }
     .abcom {
         width: 200px;
-        height: 35px;
+        height: 33px;
         font-size: 25px;
         margin: 0 auto;
         color: white;
