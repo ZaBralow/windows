@@ -131,8 +131,8 @@ img {
 
 .toup {
     width: 100px;
-    border: 2px solid #00A900;
-    background: #00A900;
+    border: 2px solid #4990E3;
+    background: #4990E3;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -142,15 +142,16 @@ img {
     color: white;
     font-family: verdana;
     font-size: 12px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition-duration: 0.3s;
     z-index: 2;
     float: right;
     text-decoration: none;
+    box-shadow: 0px 0px 5px black;
 }
 
 .toup:hover {
-    box-shadow: 0px 0px 8px black;
+    box-shadow: 0px 0px 10px black;
     text-decoration: none;
     color: white;
 }
