@@ -70,15 +70,6 @@ img {
     padding: 80px;
 }
 
-.abcom {
-    width: 300px;
-    height: 53px;
-    margin: 0 auto;
-    color: white;
-    background-color: #1F1E1B;
-    box-shadow: 0 0 10px black;
-}
-
 .abtxt {
     width: 700px;
     font-size: 20px;
@@ -100,6 +91,15 @@ img {
     color: rgba(0, 0, 0, 0.459);
 }
 
+.abcom {
+    width: 300px;
+    height: 53px;
+    margin: 0 auto;
+    color: white;
+    background-color: #1F1E1B;
+    box-shadow: 0 0 10px black;
+}
+
 .abcom_production {
     width: 340px;
     height: 53px;
@@ -116,6 +116,17 @@ img {
     color: white;
     background-color: #1F1E1B;
     box-shadow: 0 0 10px black;
+}
+
+.abcom_plast {
+    margin: 0 auto;
+    width: 438px;
+    height: 53px;
+    color: white;
+    background-color: #1F1E1B;
+    box-shadow: 0 0 10px black;
+    margin-top: 1vw;
+    text-align: center;
 }
 
 .forform {
@@ -166,6 +177,42 @@ img {
 #underwindows {
     margin-top: 5vw;
 }
+
+.popup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.popup_bg {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.popup_img {
+    position: fixed;
+    /* margin: 0 auto; */
+    z-index: 2;
+    max-height: 94%;
+    max-width: 94%;
+    /* margin: 1% 0 0 0; */
+    margin-left: -41.7vw;
+    margin-top: 1vw;
+}
+
+.padtop {
+    margin-top: 1vw;
+    cursor: pointer;
+}
+
+
 
 @media (max-width: 990px) {
     .moimenu {
