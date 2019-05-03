@@ -44,43 +44,33 @@
 
 
     <div class="container">
-        <h1 class="abcom_plast">ПЛАСТИКОВЫЕ ОКНА</h1>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 col-12 padtop">
-                <img src="omg/plast1.jpg" class="image img-thumbnail" width="650" alt="">
+        <form id="main" v-cloak class="onvue">
+
+            <h1>Услуги и виды окон</h1>
+
+            <ul>
+                <!-- Цикл проходит по массиву услуг, присваивает обработчик для клика, и устанавливает или удаляет класс "active" -->
+                <li v-for="service in services" v-on:click="toggleActive(service)"
+                    v-bind:class="{ 'active': service.active}">
+                    <!-- Показывает название и цену для каждого вложенного элемента.
+                    Vue.js имеет встроенный фильтр валют для формирования цены -->
+                    {{service.name}} <span>{{service.price | currency}}</span>
+                </li>
+            </ul>
+
+            <div class="total">
+                <!-- Высчитывает итоговую сумму -->
+                Итоговая стоимость: <span>{{total() | currency}}</span>
             </div>
-            <div class="col-lg-4 col-sm-6 col-12 padtop">
-                <img src="omg/plast2.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-4 col-sm-12  col-12 padtop">
-                <img src="omg/plast3.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-        </div>
-        <h1 class="abcom_der">ДЕРЕВЯННЫЕ ОКНА</h1>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 col-12 padtop">
-                <img src="omg/der1.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 padtop">
-                <img src="omg/der2.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-4 col-sm-12 col-12 padtop">
-                <img src="omg/der3.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-        </div>
-        <h1 class="abcom_fin">ФИНСКИЕ ОКНА</h1>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 col-12 padtop">
-                <img src="omg/fin1.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-4 col-sm-6 col-12 padtop">
-                <img src="omg/fin2.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-4 col-sm-12  col-12 padtop">
-                <img src="omg/fin3.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-        </div>
+
+        </form>
+
     </div>
+
+
+
+
+
 
 
 
@@ -108,8 +98,6 @@
         </div>
     </div>
 
-
-
     <a href="#up" class="toup">Наверх</a>
 
     <footer class="footer">
@@ -124,7 +112,7 @@
                     <ul>
                         <li>8 800 555 35 35</li>
                         <li>fcksht@dno.ru</li>
-                        <li>кв.45 ул.Пушкина</li>
+                        <li>кв.45 ул.Пушкина сел.Колбаса</li>
                     </ul>
                 </div>
             </div>
@@ -139,7 +127,7 @@
 
 
 
-
+    <script src="js/vue.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
