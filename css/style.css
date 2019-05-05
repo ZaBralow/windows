@@ -208,15 +208,18 @@ img {
     top: 0;
     left: 0;
     display: none;
-    text-align: center;
+    /* text-align: center; */
+    margin: 0 auto;
 }
 
 .popup_bg {
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
     z-index: 1;
-    height: 1000%;
+    height: 1260%;
     width: 100%;
+    margin: 0 auto;
+    
 }
 
 .popup_img {
@@ -225,10 +228,10 @@ img {
     z-index: 2;
     max-height: 94%;
     max-width: 94%;
-    /* margin: 1% 0 0 0; */
-    margin-left: -41.7vw;
-    margin-top: 1vw;
-    float: inline-start;
+    margin: 1% 0 0 0;
+    margin-top: 1.5vw;
+    padding-left: 8vw;
+    cursor: pointer;
 }
 
 .padtop {
@@ -239,7 +242,7 @@ img {
 .onvue {
     background-color: #4990E3;
     border-radius: 12px;
-    box-shadow: 0 1px 10px rgb(53, 51, 51);
+    box-shadow: 0 1px 5px rgb(53, 51, 51);
     width: 100%;
     padding: 35px 60px;
     margin: 50px auto;
@@ -261,6 +264,7 @@ img {
     font-weight: bold;
     text-align: left;
     margin: 20px 0 15px;
+    padding-left: 0;
 }
 
 .onvue ul li {
@@ -270,6 +274,7 @@ img {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition-duration: 0.2s;
+    border-radius: 10px;
 }
 
 .onvue ul li span {
@@ -277,9 +282,8 @@ img {
 }
 
 .onvue ul li.active {
-    background-color: #8ec16d;
+    background-color: #78ca41;
     transition-duration: 0.2s;
-    border-radius: 5px;
 }
 
 .onvue .total {
@@ -394,5 +398,44 @@ img {
     }
     .onvue ul li {
         font-size: 17px;
+    }
+    .onvue ul {
+        list-style: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+        margin: 20px -45px 15px;
+        padding-left: 0;
+    }
+    .onvue .total {
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: left;
+        color: #fff;
+        width: 260px;
+        height: 20px;
+        
+    }
+    .onvue .total span {
+        float: right;
+    }
+}
+@media (max-width: 400px) {
+    .onvue .total {
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: left;
+        color: #fff;
+        width: 200px;
+        height: 20px;
+        margin-left: -10%;
+    }
+    .onvue .total span {
+        float: left;
     }
 }
