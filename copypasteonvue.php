@@ -1,3 +1,24 @@
+<?php
+require "db.php";
+
+$data = $_POST;
+if (isset($data['do_signup'])) {
+    if (trim($data['email']) == '') {
+        $errors[] = 'Email is empty!';
+    }
+    if (trim($data['name']) == '') {
+        $errors[] = 'Name is empty!';
+    }
+    if (empty($errors)) {
+        $user = R::dispense('users');
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        R::store($user);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +43,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav moimenu">
                     <a href="index.html"><img src="omg/s1200.png" width="40xp" height="40px" alt=""></a>
-                    <a class="nav-item nav-link active c" href="index.html">На главную</a>
-                    <a class="nav-item nav-link active c" href="gallery.html">Галерея</a>
-                    <a class="nav-item nav-link active c" href="copypasteonvue.html">Расчет стоимости</a>
+                    <a class="nav-item nav-link active c" href="index.php">На главную</a>
+                    <a class="nav-item nav-link active c" href="gallery.php">Галерея</a>
+                    <a class="nav-item nav-link active c" href="copypasteonvue.php">Расчет стоимости</a>
                     <li class="nav-item dropdown c">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,52 +65,29 @@
 
 
     <div class="container">
-        <h1 class="abcom_plast">ПЛАСТИКОВЫЕ ОКНА</h1>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/plast1.jpg" class="image img-thumbnail" width="650" alt="">
+        <form id="main" v-cloak class="onvue">
+
+            <h1>Услуги и виды окон</h1>
+
+            <ul>
+                <li v-for="service in services" v-on:click="toggleActive(service)"
+                    v-bind:class="{ 'active': service.active}">
+                    {{service.name}} <span>{{service.price | currency}}</span>
+                </li>
+            </ul>
+
+            <div class="total">
+                Итоговая стоимость: <span>{{total() | currency}}</span>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/plast2.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6  col-12 padtop">
-                <img src="omg/plast3.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6  col-12 padtop">
-                <img src="omg/plast4.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-        </div>
-        <h1 class="abcom_der">ДЕРЕВЯННЫЕ ОКНА</h1>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/der1.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/der2.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/der3.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/der4.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-        </div>
-        <h1 class="abcom_fin">ФИНСКИЕ ОКНА</h1>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/fin1.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/fin2.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6  col-12 padtop">
-                <img src="omg/fin3.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-            <div class="col-lg-3 col-sm-6 col-12 padtop">
-                <img src="omg/fin4.jpg" class="image img-thumbnail" width="650" alt="">
-            </div>
-        </div>
+
+        </form>
+
     </div>
+
+
+
+
+
 
 
 
@@ -104,20 +102,18 @@
             <div class="upform col-lg-12">
                 <p class="text-center">ОТПРАВИТЬ ЗАЯВКУ</p>
             </div>
-            <form action="">
+            <form action="index.php" method="POST">
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Электронная почта">
+                        placeholder="Электронная почта" value="<?php echo @$data['email']; ?>" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Имя">
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Имя" value="<?php echo @$data['login']; ?>" name="name">
                 </div>
-                <button type="submit" class="btn btn-outline-light" style="width: 100%;">ОТПРАВИТЬ</button>
+                <button type="submit" class="btn btn-outline-light" name="do_signup" style="width: 100%;">ОТПРАВИТЬ</button>
             </form>
         </div>
     </div>
-
-
 
     <a href="#up" class="toup">Наверх</a>
 
@@ -133,7 +129,7 @@
                     <ul>
                         <li>8 800 555 35 35</li>
                         <li>fcksht@dno.ru</li>
-                        <li>кв.45 ул.Пушкина сел. Колбаса</li>
+                        <li>кв.45 ул.Пушкина сел.Колбаса</li>
                     </ul>
                 </div>
             </div>
@@ -148,7 +144,7 @@
 
 
 
-
+    <script src="js/vue.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

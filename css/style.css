@@ -287,7 +287,6 @@ img {
 }
 
 .onvue .total {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
@@ -409,7 +408,6 @@ img {
         padding-left: 0;
     }
     .onvue .total {
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
         padding: 0;
         font-size: 17px;
         font-weight: bold;
@@ -425,7 +423,6 @@ img {
 }
 @media (max-width: 400px) {
     .onvue .total {
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
         padding: 0;
         font-size: 17px;
         font-weight: bold;

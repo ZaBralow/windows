@@ -1,3 +1,24 @@
+<?php
+require "db.php";
+
+$data = $_POST;
+if (isset($data['do_signup'])) {
+    if (trim($data['email']) == '') {
+        $errors[] = 'Email is empty!';
+    }
+    if (trim($data['name']) == '') {
+        $errors[] = 'Name is empty!';
+    }
+    if (empty($errors)) {
+        $user = R::dispense('users');
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        R::store($user);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +43,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav moimenu">
                     <a href="index.html"><img src="omg/s1200.png" width="40xp" height="40px" alt=""></a>
-                    <a class="nav-item nav-link active c" href="index.html">На главную</a>
-                    <a class="nav-item nav-link active c" href="gallery.html">Галерея</a>
-                    <a class="nav-item nav-link active c" href="copypasteonvue.html">Расчет стоимости</a>
+                    <a class="nav-item nav-link active c" href="index.php">На главную</a>
+                    <a class="nav-item nav-link active c" href="gallery.php">Галерея</a>
+                    <a class="nav-item nav-link active c" href="copypasteonvue.php">Расчет стоимости</a>
                     <li class="nav-item dropdown c">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -177,15 +198,15 @@
             <div class="upform col-lg-12">
                 <p class="text-center">ОТПРАВИТЬ ЗАЯВКУ</p>
             </div>
-            <form action="">
+            <form action="index.php" method="POST">
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Электронная почта">
+                        placeholder="Электронная почта" value="<?php echo @$data['email']; ?>" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Имя">
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Имя" value="<?php echo @$data['login']; ?>" name="name">
                 </div>
-                <button type="submit" class="btn btn-outline-light" style="width: 100%;">ОТПРАВИТЬ</button>
+                <button type="submit" class="btn btn-outline-light" name="do_signup" style="width: 100%;">ОТПРАВИТЬ</button>
             </form>
         </div>
     </div>
