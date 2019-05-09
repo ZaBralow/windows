@@ -1,23 +1,4 @@
-<?php
-require "db.php";
 
-$data = $_POST;
-if (isset($data['do_signup'])) {
-    if (trim($data['email']) == '') {
-        $errors[] = 'Email is empty!';
-    }
-    if (trim($data['name']) == '') {
-        $errors[] = 'Name is empty!';
-    }
-    if (empty($errors)) {
-        $user = R::dispense('users');
-        $user->name = $data['name'];
-        $user->email = $data['email'];
-        R::store($user);
-    }
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -198,7 +179,7 @@ if (isset($data['do_signup'])) {
             <div class="upform col-lg-12">
                 <p class="text-center">ОТПРАВИТЬ ЗАЯВКУ</p>
             </div>
-            <form action="index.php" method="POST">
+            <form action="action.php" method="POST">
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Электронная почта" value="<?php echo @$data['email']; ?>" name="email">
