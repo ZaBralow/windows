@@ -91,14 +91,6 @@ var demo = new Vue({
 		}
 	}
 });
-
-$(document).ready(function () {
-	$.ajax({
-		url: 'js/script',
-		method: 'POST',
-		data: $('form').serialize(),
-		success: function () {
-			alert('Заявка отправлена!')
-		}
-	});
-})
+function sended(){
+	alert("Отправлено");
+}

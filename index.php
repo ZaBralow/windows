@@ -99,7 +99,7 @@
             <h1 class="text-center abcom_production">ПРОИЗВОДСТВО</h1>
         </div>
         <div class="divp text-center">
-            <p>Наше производство находится в республике Чувашии.</p>
+            <p>Наше производство находится в Республике Чувашия.</p>
         </div>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15201.788482874661!2d46.4072610991985!3d55.50171814737065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1556104860591!5m2!1sru!2sru"
@@ -177,17 +177,17 @@
     <div class="forform" id="kontakt">
         <div class="container">
             <div class="upform col-lg-12">
-                <p class="text-center">ОТПРАВИТЬ ЗАЯВКУ</p>
+                <p class="text-center">Оставьте свои контактные данные и мы свяжемся с вами</p>
             </div>
-            <form action="action.php" method="POST">
+            <form action="action.php" method="POST" id="windform">
                 <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Электронная почта" value="<?php echo @$data['email']; ?>" name="email">
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                        placeholder="Ваше имя" value="" name="name">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Имя" value="<?php echo @$data['login']; ?>" name="name">
+                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Ваша почта" value="" name="email">
                 </div>
-                <button type="submit" class="btn btn-outline-light" name="do_signup" style="width: 100%;">ОТПРАВИТЬ</button>
+                <button type="submit" class="btn btn-outline-light" name="action" style="width: 100%;" id="button" onclick="sended();">ОТПРАВИТЬ</button>
             </form>
         </div>
     </div>
@@ -199,7 +199,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="">
+                <div class="col l4 s12">
                     <h5>ОАО "Windows"</h5>
                     <p>Мы принимаем к оплате карты МИР, MasterCard, Visa и так же оплату с моб. телефона.</p>
                 </div>
@@ -223,9 +223,10 @@
 
 
 
-
+    <script src="js/vue.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/script.js"></script>
 </body>
 
