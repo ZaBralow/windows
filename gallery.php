@@ -105,7 +105,7 @@
     <div class="forform" id="kontakt">
         <div class="container">
             <div class="upform col-lg-12">
-                <p class="text-center">Оставьте свои контактные данные и мы свяжемся с вами</p>
+                <p class="text-center">Оставьте контакты</p>
             </div>
             <form action="action.php" method="POST" id="windform">
                 <div class="form-group">
