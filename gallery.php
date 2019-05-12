@@ -24,7 +24,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav moimenu">
-                    <a href="index.html"><img src="omg/s1200.png" width="40xp" height="40px" alt=""></a>
+                    <a href="index.php"><img src="omg/s1200.png" width="40xp" height="40px" alt=""></a>
                     <a class="nav-item nav-link active c" href="index.php">На главную</a>
                     <a class="nav-item nav-link active c" href="gallery.php">Галерея</a>
                     <a class="nav-item nav-link active c" href="copypasteonvue.php">Расчет стоимости</a>
@@ -107,7 +107,7 @@
             <div class="upform col-lg-12">
                 <p class="text-center">Оставьте свои контактные данные и мы свяжемся с вами</p>
             </div>
-            <form action="action.php" method="POST" id="windform">
+            <form action="action.php" method="POST" id="windform" class="toodown">
                 <div class="form-group">
                     <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
                         placeholder="Ваше имя" value="" name="name">

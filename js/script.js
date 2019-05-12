@@ -91,6 +91,20 @@ var demo = new Vue({
 		}
 	}
 });
-function sended(){
-	alert("Отправлено");
-}
+
+$(document).ready(function() {
+ 
+ 
+	$("a.toup").click(function() {
+	   $("html, body").animate({
+		  scrollTop: $($(this).attr("href")).offset().top + "px"
+	   }, {
+		  duration: 500,
+		  easing: "swing"
+	   });
+	   return false;
+	});
+  
+  
+ });
+
