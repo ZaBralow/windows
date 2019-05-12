@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +15,7 @@
 
     <header id="up">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4990E3; color: white;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -28,8 +25,7 @@
                     <a class="nav-item nav-link active c" href="gallery.php">Галерея</a>
                     <a class="nav-item nav-link active c" href="copypasteonvue.php">Расчет стоимости</a>
                     <li class="nav-item dropdown c">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Контакты
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -101,9 +97,7 @@
         <div class="divp text-center">
             <p>Наше производство находится в Республике Чувашия.</p>
         </div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15201.788482874661!2d46.4072610991985!3d55.50171814737065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1556104860591!5m2!1sru!2sru"
-            width="100%" height="500vw" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15201.788482874661!2d46.4072610991985!3d55.50171814737065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1556104860591!5m2!1sru!2sru" width="100%" height="500vw" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
 
@@ -117,23 +111,19 @@
     <br>
     <div class="container text-center">
         <div class="row">
-            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/1.jpg" alt=""
-                    class="img-fluid img-thumbnail mx-auto" id="imghv">
+            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/1.jpg" alt="" class="img-fluid img-thumbnail mx-auto" id="imghv">
                 <p class="windows">Пластиковые окна</p>
                 <p style="color: green; font-size: 18px; font-weight: bold">от 9450 руб</p>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/2.jpg" alt=""
-                    class="img-fluid img-thumbnail mx-auto" id="imghv">
+            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/2.jpg" alt="" class="img-fluid img-thumbnail mx-auto" id="imghv">
                 <p class="windows">Деревянные окна</p>
                 <p style="color: green; font-size: 18px; font-weight: bold">от 7450 руб</p>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/3.jpg" alt=""
-                    class="img-fluid img-thumbnail mx-auto" id="imghv">
+            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/3.jpg" alt="" class="img-fluid img-thumbnail mx-auto" id="imghv">
                 <p class="windows">Финские окна</p>
                 <p style="color: green; font-size: 18px; font-weight: bold">от 11450 руб</p>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/4.jpg" alt=""
-                    class="img-fluid img-thumbnail mx-auto" id="imghv">
+            <div class="col-lg-3 col-sm-6 col-12 b" id="window"><img src="omg/4.jpg" alt="" class="img-fluid img-thumbnail mx-auto" id="imghv">
                 <p class="windows">Чувашские окна</p>
                 <p style="color: green; font-size: 18px; font-weight: bold">от 450 руб</p>
             </div>
@@ -147,16 +137,13 @@
         <div id="carouselExampleControls" class="carousel slide col-lg-12 col-sm-12 col-md-12" data-ride="carousel">
             <div class="carousel-inner cara">
                 <div class="carousel-item active" data-interval="10000">
-                    <img src="omg/car1.jpg" class="d-block w-100 img-fluid img-thumbnail mx-auto" alt="..."
-                        height="300px">
+                    <img src="omg/car1.jpg" class="d-block w-100 img-fluid img-thumbnail mx-auto" alt="..." height="300px">
                 </div>
                 <div class="carousel-item" data-interval="10000">
-                    <img src="omg/car2.png" class="d-block w-100 img-fluid img-thumbnail mx-auto" alt="..."
-                        height="300px">
+                    <img src="omg/car2.png" class="d-block w-100 img-fluid img-thumbnail mx-auto" alt="..." height="300px">
                 </div>
                 <div class="carousel-item" data-interval="10000">
-                    <img src="omg/car3.jpg" class="d-block w-100 img-fluid img-thumbnail mx-auto" alt="..."
-                        height="300px">
+                    <img src="omg/car3.jpg" class="d-block w-100 img-fluid img-thumbnail mx-auto" alt="..." height="300px">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -169,7 +156,7 @@
             </a>
         </div>
     </div>
-  
+
 
 
 
@@ -177,12 +164,11 @@
     <div class="forform" id="kontakt">
         <div class="container">
             <div class="upform col-lg-12">
-                <p class="text-center">Оставьте контакты</p>
+                <p class="text-center">Оставьте контакты и мы свяжемся с вами</p>
             </div>
             <form action="action.php" method="POST" id="windform" class="toodown">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
-                        placeholder="Ваше имя" value="" name="name">
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Ваше имя" value="" name="name">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Ваша почта" value="" name="email">
@@ -194,7 +180,7 @@
 
 
 
-<a href="#up" class="toup">Наверх</a>
+    <a href="#up" class="toup">Наверх</a>
 
     <footer class="footer">
         <div class="container">

@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +15,7 @@
 
     <header id="up">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4990E3; color: white;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -29,8 +25,7 @@
                     <a class="nav-item nav-link active c" href="gallery.php">Галерея</a>
                     <a class="nav-item nav-link active c" href="copypasteonvue.php">Расчет стоимости</a>
                     <li class="nav-item dropdown c">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Контакты
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -105,12 +100,11 @@
     <div class="forform" id="kontakt">
         <div class="container">
             <div class="upform col-lg-12">
-                <p class="text-center">Оставьте контакты</p>
+                <p class="text-center">Оставьте контакты и мы свяжемся с вами</p>
             </div>
             <form action="action.php" method="POST" id="windform" class="toodown">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
-                        placeholder="Ваше имя" value="" name="name">
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Ваше имя" value="" name="name">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Ваша почта" value="" name="email">
